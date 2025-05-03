@@ -47,8 +47,13 @@ function playRound(humanChoice, computerChoice) {
         document.querySelector(".gameover").style.display = 'block';
         const gameWinner = document.getElementById('game_winner');
         gameWinner.textContent = humanScore === 5 ? 'You win the game!' : 'Computer wins the game!';
+
+        document.querySelector("#rock_player").disabled = true;
+        document.querySelector("#paper_player").disabled = true;
+        document.querySelector("scissor_player").disabled = true;
     
     }
+
 
     document.getElementById('replay').addEventListener('click', () => {
         humanScore = 0;
@@ -57,6 +62,9 @@ function playRound(humanChoice, computerChoice) {
         compScore.textContent = "Computer Score: " + computerScore;
         document.querySelector('.gameover').style.display = 'none';
         document.getElementById('winner').textContent = '';
+        document.querySelector("#rock_player").disabled = false;
+        document.querySelector("#paper_player").disabled = false;
+        document.querySelector("scissor_player").disabled = false;
       });
       
 

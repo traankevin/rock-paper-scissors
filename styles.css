@@ -17,16 +17,24 @@ body {
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    max-width: 800px;
+    margin: auto;
+
+    
 }
 
 .player_choice {
     display: flex;
     gap: 50px;
+    padding: 20px;
+    flex-wrap: wrap;
+    max-width: 90vh;
+    width: fit-content;
     margin-top: 30px;
     border-style: solid;
     align-items: center;
     justify-items: center;
-    height: 15vh;
+    height: auto;
     border-radius: 10px;
 }
 
@@ -83,3 +91,14 @@ button {
     padding: 0;
 
 }
+
+.player_choice button img {
+    max-width: 100px;
+    height: 80px;
+    width: auto;
+}
+
+.player_choice button {
+    flex: 1 1 auto;
+}
+
