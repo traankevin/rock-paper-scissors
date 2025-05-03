@@ -62,3 +62,24 @@ body {
     margin-bottom: 30px;
 }
 
+.gameover {
+    border-style: solid;
+    margin-top: 30px;
+    text-align: center;
+    height: 100px;
+    width: 200px;
+    display: none;
+}
+
+#replay img {
+    height: 50px;
+    width: 100px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+}

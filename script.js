@@ -43,6 +43,23 @@ function playRound(humanChoice, computerChoice) {
     playerScore.textContent = "Player Score: " + humanScore;
     compScore.textContent = "Computer Score: " + computerScore;
 
+    if (humanScore === 5 || computerScore === 5) {
+        document.querySelector(".gameover").style.display = 'block';
+        const gameWinner = document.getElementById('game_winner');
+        gameWinner.textContent = humanScore === 5 ? 'You win the game!' : 'Computer wins the game!';
+    
+    }
+
+    document.getElementById('replay').addEventListener('click', () => {
+        humanScore = 0;
+        computerScore = 0;
+        playerScore.textContent = "Player Score: " + humanScore;
+        compScore.textContent = "Computer Score: " + computerScore;
+        document.querySelector('.gameover').style.display = 'none';
+        document.getElementById('winner').textContent = '';
+      });
+      
+
 
 }
 
@@ -73,3 +90,5 @@ const scissors_button = document.querySelector("#scissors_player");
 scissors_button.addEventListener("click", function (e) {
     playGame('scissors');
 });
+
+
